@@ -1,4 +1,3 @@
-# Lista para armazenar denúncias (simulado)
 denuncias = []
 
 def registrar_denuncia():
@@ -7,7 +6,6 @@ def registrar_denuncia():
     descricao = input("Descrição: ")
     local = input("Local (rua/bairro): ")
     
-    # Cria um dicionário com os dados
     nova_denuncia = {
         "titulo": titulo,
         "descricao": descricao,
