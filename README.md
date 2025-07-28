@@ -1,1 +1,0 @@
-# tabalho_2Tri_python
