@@ -1,0 +1,8 @@
+print("Digite o comentário:")
+denuncia = input("ID da denúncia: ")
+usuario = input("ID do usuário: ")
+comentario = input("Texto: ")
+
+print("\nComentário adicionado:")
+print(f"Denúncia {denuncia} | Usuário {usuario}")
+print(f"'{comentario}'")
