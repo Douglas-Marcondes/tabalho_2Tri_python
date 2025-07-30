@@ -1,0 +1,12 @@
+print("REGISTRO DE ACESSO")
+
+usuario_id = input("ID do usuário: ")
+acao = input("Ação realizada (ex: Login, Logout): ")
+dispositivo = input("Tipo de dispositivo (ex: Mobile, Desktop): ")
+
+print("\nREGISTRO CRIADO:")
+print(f"Usuário: {usuario_id}")
+print(f"Ação: {acao}")
+print(f"Dispositivo: {dispositivo}")
+print("Data: 2023-11-25")  # Data simulada
+print("IP: 192.168.1.1")   # IP simulado
