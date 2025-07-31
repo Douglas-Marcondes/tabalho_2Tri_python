@@ -1,0 +1,357 @@
+:root {
+    --cor-primaria: #2e7d32;
+    --cor-secundaria: #333;
+    --cor-texto: #333;
+    --cor-fundo: #f5f5f5;
+    --cor-branco: #fff;
+    --sombra: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cabecalho {
+    background-color: var(--cor-branco);
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    color: var(--cor-primaria);
+    font-size: 1.8rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover, .menu .ativo {
+    color: var(--cor-primaria);
+}
+
+#botao-tema-escuro {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    color: var(--cor-texto);
+}
+
+.botao-menu-mobile {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.destaque {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/bg-cidade.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--cor-branco);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.destaque h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.destaque p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.botao-primario, .botao-secundario {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.botao-primario {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+.botao-primario:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+.botao-secundario {
+    background-color: transparent;
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+}
+
+.botao-secundario:hover {
+    background-color: rgba(46, 125, 50, 0.1);
+}
+
+.funcionalidades {
+    padding: 80px 0;
+}
+
+.funcionalidades h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
+
+.grade-funcionalidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.cartao-funcionalidade {
+    background-color: var(--cor-branco);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+}
+
+.cartao-funcionalidade:hover {
+    transform: translateY(-10px);
+}
+
+.cartao-funcionalidade i {
+    font-size: 3rem;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+.cartao-funcionalidade h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.denuncias-recentes {
+    padding: 0 0 80px;
+}
+
+.denuncias-recentes h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.filtros {
+    margin-bottom: 30px;
+}
+
+.seletor-categoria {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.lista-denuncias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.cartao-denuncia {
+    background-color: var(--cor-branco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.cartao-denuncia img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.conteudo-denuncia {
+    padding: 20px;
+}
+
+.conteudo-denuncia h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.localizacao, .descricao {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.localizacao i {
+    color: var(--cor-primaria);
+    margin-right: 5px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-andamento {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.status-resolvido {
+    background-color: #e8f5e9;
+    color: var(--cor-primaria);
+}
+
+.rodape {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 50px 0 0;
+}
+
+.info-rodape {
+    margin-bottom: 30px;
+}
+
+.logo-rodape {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo-rodape i {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+}
+
+.links-rodape h3, .contato-rodape h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.links-rodape ul {
+    list-style: none;
+}
+
+.links-rodape a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.links-rodape a:hover {
+    color: var(--cor-branco);
+}
+
+.contato-rodape p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.copyright {
+    background-color: #222;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    
+    .botao-menu-mobile {
+        display: block;
+    }
+    
+    .destaque h2 {
+        font-size: 2rem;
+    }
+    
+    .grade-funcionalidades {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cor-texto: #f5f5f5;
+        --cor-fundo: #121212;
+        --cor-branco: #1e1e1e;
+        --cor-secundaria: #2d2d2d;
+    }
+    
+    .cabecalho, .cartao-funcionalidade, .cartao-denuncia {
+        background-color: #2d2d2d;
+    }
+    
+    .menu a, .destaque {
+        color: #f5f5f5;
+    }
+    
+    .copyright {
+        background-color: #1a1a1a;
+    }
+}
