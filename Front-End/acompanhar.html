@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanoAlert - Acompanhar Denúncias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="acompanhar.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h1>UrbanoAlert</h1>
+            </div>
+            <nav class="navegacao">
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="denunciar.html">Denunciar</a></li>
+                    <li><a href="acompanhar.html" class="ativo">Acompanhar</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="#" id="botao-login">Painel</a></li>
+                </ul>
+                <button id="botao-tema-escuro" aria-label="Alternar modo escuro">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+            <button class="botao-menu-mobile" aria-label="Menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="acompanhamento-denuncias">
+            <div class="container">
+                <h2>Acompanhe suas denúncias</h2>
+                
+                <div class="filtros-acompanhamento">
+                    <div class="grupo-filtro">
+                        <label for="filtro-status">Filtrar por status:</label>
+                        <select id="filtro-status">
+                            <option value="todos">Todos</option>
+                            <option value="pendente">Pendente</option>
+                            <option value="andamento">Em andamento</option>
+                            <option value="resolvido">Resolvido</option>
+                        </select>
+                    </div>
+                    <div class="grupo-filtro">
+                        <label for="filtro-data">Ordenar por:</label>
+                        <select id="filtro-data">
+                            <option value="recentes">Mais recentes</option>
+                            <option value="antigas">Mais antigas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="lista-denuncias-usuario">
+                    <!-- Denúncia 1 -->
+                    <div class="cartao-denuncia-usuario" data-status="andamento" data-data="2023-03-15">
+                        <div class="cabecalho-denuncia">
+                            <h3>Buraco na Rua das Flores</h3>
+                            <div class="status status-andamento">Em andamento</div>
+                        </div>
+                        <div class="corpo-denuncia">
+                            <p class="data"><i class="far fa-calendar-alt"></i> 15/03/2023</p>
+                            <p class="localizacao"><i class="fas fa-map-marker-alt"></i> Centro, 500m de você</p>
+                            <div class="acoes-denuncia">
+                                <button class="botao-icone" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="botao-icone" title="Compartilhar">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                <button class="botao-icone" title="Imprimir">
+                                    <i class="fas fa-print"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Denúncia 2 -->
+                    <div class="cartao-denuncia-usuario" data-status="resolvido" data-data="2023-03-10">
+                        <div class="cabecalho-denuncia">
+                            <h3>Lixo acumulado</h3>
+                            <div class="status status-resolvido">Resolvido</div>
+                        </div>
+                        <div class="corpo-denuncia">
+                            <p class="data"><i class="far fa-calendar-alt"></i> 10/03/2023</p>
+                            <p class="localizacao"><i class="fas fa-map-marker-alt"></i> Bairro Novo, 1.2km de você</p>
+                            <div class="acoes-denuncia">
+                                <button class="botao-icone" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="botao-icone" title="Compartilhar">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                <button class="botao-icone" title="Imprimir">
+                                    <i class="fas fa-print"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Denúncia 3 -->
+                    <div class="cartao-denuncia-usuario" data-status="pendente" data-data="2023-03-18">
+                        <div class="cabecalho-denuncia">
+                            <h3>Poste de luz quebrado</h3>
+                            <div class="status status-pendente">Pendente</div>
+                        </div>
+                        <div class="corpo-denuncia">
+                            <p class="data"><i class="far fa-calendar-alt"></i> 18/03/2023</p>
+                            <p class="localizacao"><i class="fas fa-map-marker-alt"></i> Jardim Paulista, 800m de você</p>
+                            <div class="acoes-denuncia">
+                                <button class="botao-icone" title="Ver detalhes">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="botao-icone" title="Compartilhar">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                <button class="botao-icone" title="Imprimir">
+                                    <i class="fas fa-print"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="info-rodape">
+                <div class="logo-rodape">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>UrbanoAlert</span>
+                </div>
+                <p>Transformando cidades através da participação cidadã</p>
+            </div>
+            <div class="links-rodape">
+                <h3>Links úteis</h3>
+                <ul>
+                    <li><a href="sobre.html">Sobre o projeto</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                </ul>
+            </div>
+            <div class="contato-rodape">
+                <h3>Contato</h3>
+                <p><i class="fas fa-envelope"></i> contato@urbanoalert.com.br</p>
+                <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; 2025 UrbanoAlert - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="acompanhar.js"></script>
+</body>
+</html>
