@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanoAlert - Painel Administrativo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="painel.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h1>UrbanoAlert</h1>
+            </div>
+            <nav class="navegacao">
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="denunciar.html">Denunciar</a></li>
+                    <li><a href="acompanhar.html">Acompanhar</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="painel.html" class="ativo">Painel</a></li>
+                </ul>
+                <button id="botao-tema-escuro" aria-label="Alternar modo escuro">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+            <button class="botao-menu-mobile" aria-label="Menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="painel-administrativo">
+            <div class="container">
+                <h2>Painel Administrativo</h2>
+                
+                <div class="resumo-estatisticas">
+                    <div class="cartao-estatistica">
+                        <h3>Denúncias hoje</h3>
+                        <p class="valor">24</p>
+                        <p class="variacao positiva"><i class="fas fa-arrow-up"></i> 12%</p>
+                    </div>
+                    <div class="cartao-estatistica">
+                        <h3>Em andamento</h3>
+                        <p class="valor">156</p>
+                        <p class="variacao negativa"><i class="fas fa-arrow-down"></i> 5%</p>
+                    </div>
+                    <div class="cartao-estatistica">
+                        <h3>Resolvidas (mês)</h3>
+                        <p class="valor">342</p>
+                        <p class="variacao positiva"><i class="fas fa-arrow-up"></i> 18%</p>
+                    </div>
+                    <div class="cartao-estatistica">
+                        <h3>Tempo médio</h3>
+                        <p class="valor">3.2 dias</p>
+                        <p class="variacao positiva"><i class="fas fa-arrow-down"></i> 0.8 dias</p>
+                    </div>
+                </div>
+
+                <div class="controles-painel">
+                    <div class="filtros-painel">
+                        <div class="grupo-filtro">
+                            <label for="filtro-bairro">Bairro:</label>
+                            <select id="filtro-bairro">
+                                <option>Todos bairros</option>
+                                <option>Centro</option>
+                                <option>Bairro Novo</option>
+                                <option>Jardim Paulista</option>
+                                <option>Vila Industrial</option>
+                            </select>
+                        </div>
+                        <div class="grupo-filtro">
+                            <label for="filtro-categoria">Categoria:</label>
+                            <select id="filtro-categoria">
+                                <option>Todas categorias</option>
+                                <option>Buraco na via</option>
+                                <option>Iluminação pública</option>
+                                <option>Lixo acumulado</option>
+                                <option>Outros</option>
+                            </select>
+                        </div>
+                        <div class="grupo-filtro">
+                            <label for="filtro-periodo">Período:</label>
+                            <select id="filtro-periodo">
+                                <option>Últimos 7 dias</option>
+                                <option>Últimos 30 dias</option>
+                                <option>Este mês</option>
+                                <option>Personalizado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="botao-primario" id="botao-exportar">
+                        <i class="fas fa-file-export"></i> Exportar relatório
+                    </button>
+                </div>
+
+                <div class="tabela-denuncias">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Data</th>
+                                <th>Categoria</th>
+                                <th>Localização</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-bairro="Centro" data-categoria="Buraco na via" data-status="andamento">
+                                <td>#10025</td>
+                                <td>15/06/2023</td>
+                                <td>Buraco na via</td>
+                                <td>Rua das Flores, 123</td>
+                                <td><span class="status status-andamento">Em andamento</span></td>
+                                <td class="acoes-tabela">
+                                    <button class="botao-icone" title="Editar">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="botao-icone" title="Alterar status">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr data-bairro="Bairro Novo" data-categoria="Lixo acumulado" data-status="resolvido">
+                                <td>#10024</td>
+                                <td>14/06/2023</td>
+                                <td>Lixo acumulado</td>
+                                <td>Av. Principal, 456</td>
+                                <td><span class="status status-resolvido">Resolvido</span></td>
+                                <td class="acoes-tabela">
+                                    <button class="botao-icone" title="Editar">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="botao-icone" title="Alterar status">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr data-bairro="Jardim Paulista" data-categoria="Iluminação pública" data-status="pendente">
+                                <td>#10023</td>
+                                <td>13/06/2023</td>
+                                <td>Iluminação pública</td>
+                                <td>Rua das Árvores, 789</td>
+                                <td><span class="status status-pendente">Pendente</span></td>
+                                <td class="acoes-tabela">
+                                    <button class="botao-icone" title="Editar">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="botao-icone" title="Alterar status">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr data-bairro="Vila Industrial" data-categoria="Outros" data-status="andamento">
+                                <td>#10022</td>
+                                <td>12/06/2023</td>
+                                <td>Outros</td>
+                                <td>Rua Industrial, 321</td>
+                                <td><span class="status status-andamento">Em andamento</span></td>
+                                <td class="acoes-tabela">
+                                    <button class="botao-icone" title="Editar">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="botao-icone" title="Alterar status">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="info-rodape">
+                <div class="logo-rodape">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>UrbanoAlert</span>
+                </div>
+                <p>Transformando cidades através da participação cidadã</p>
+            </div>
+            <div class="links-rodape">
+                <h3>Links úteis</h3>
+                <ul>
+                    <li><a href="sobre.html">Sobre o projeto</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                </ul>
+            </div>
+            <div class="contato-rodape">
+                <h3>Contato</h3>
+                <p><i class="fas fa-envelope"></i> contato@urbanoalert.com.br</p>
+                <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; 2025 UrbanoAlert - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="painel.js"></script>
+</body>
+</html>
