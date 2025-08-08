@@ -23,7 +23,6 @@ body {
     padding: 0 20px;
 }
 
-/* Cabeçalho */
 .cabecalho {
     background-color: var(--cor-branco);
     box-shadow: var(--sombra);
@@ -92,7 +91,6 @@ body {
     color: var(--cor-texto);
 }
 
-/* Destaque */
 .destaque {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/bg-cidade.jpg');
     background-size: cover;
@@ -115,7 +113,6 @@ body {
     margin-right: auto;
 }
 
-/* Botões */
 .botao-primario, .botao-secundario {
     display: inline-block;
     padding: 12px 30px;
@@ -145,7 +142,6 @@ body {
     background-color: rgba(46, 125, 50, 0.1);
 }
 
-/* Funcionalidades */
 .funcionalidades {
     padding: 80px 0;
 }
@@ -186,7 +182,6 @@ body {
     font-size: 1.3rem;
 }
 
-/* Denúncias Recentes */
 .denuncias-recentes {
     padding: 0 0 80px;
 }
@@ -264,7 +259,6 @@ body {
     color: var(--cor-primaria);
 }
 
-/* Rodapé */
 .rodape {
     background-color: var(--cor-secundaria);
     color: white;
@@ -323,7 +317,6 @@ body {
     margin-top: 50px;
 }
 
-/* Dark Mode */
 body.dark-mode {
     --cor-texto: #f5f5f5;
     --cor-fundo: #121212;
@@ -351,7 +344,6 @@ body.dark-mode .descricao {
     color: #ccc;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .menu {
         display: none;
